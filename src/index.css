@@ -1,0 +1,111 @@
+@import "Styles/App.css";
+@import "Styles/svg.css";
+
+@font-face {
+    font-family: IRANSans Light;
+    src: url('./Media/Fonts/IRANSans_Light.woff')
+}
+
+html, body {
+    background-color: #FFD008;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-y: hidden;
+    text-align: center;
+    direction: rtl;
+    height: 100vh;
+    font-family: IranSans Light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button, input, textarea {
+    font-family: IranSans Light;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+    border-radius: 5px;
+}
+
+/*::selection {*/
+/*color: white;*/
+/*background: black;*/
+/*}*/
+
+.material {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    direction: ltr;
+}
+
+.material:focus {
+    outline: none;
+}
+
+.material-content {
+    direction: rtl;
+    padding: 0;
+    margin: 0;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 100%;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.rippleSlow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 100%;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    animation: rippleSlow 1.5s ease-out;
+}
+
+@keyframes rippleSlow {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
