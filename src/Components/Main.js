@@ -62,14 +62,16 @@ class Main extends Component
                         this.home.style.top = '-1500px'
                         this.most.style.top = '0'
                     })
-                } else if (this.state.page === 'most')
+                }
+                else if (this.state.page === 'most')
                 {
                     this.setState({...this.state, page: 'category'}, () =>
                     {
                         this.most.style.top = '-1500px'
                         this.category.style.top = '0'
                     })
-                } else if (this.state.page === 'category')
+                }
+                else if (this.state.page === 'category')
                 {
                     this.setState({...this.state, page: 'contact'}, () =>
                     {
@@ -77,7 +79,8 @@ class Main extends Component
                         this.contact.style.top = '0'
                     })
                 }
-            } else
+            }
+            else
             {
                 if (this.state.page === 'contact')
                 {
@@ -86,14 +89,16 @@ class Main extends Component
                         this.contact.style.top = '1500px'
                         this.category.style.top = '0'
                     })
-                } else if (this.state.page === 'category')
+                }
+                else if (this.state.page === 'category')
                 {
                     this.setState({...this.state, page: 'most'}, () =>
                     {
                         this.category.style.top = '1500px'
                         this.most.style.top = '0'
                     })
-                } else if (this.state.page === 'most')
+                }
+                else if (this.state.page === 'most')
                 {
                     this.setState({...this.state, page: 'home'}, () =>
                     {
@@ -115,25 +120,29 @@ class Main extends Component
                 this[page].style.top = '0'
                 this.category.style.top = '1500px'
                 this.contact.style.top = '1500px'
-            } else if (now === 'home' && page === 'category')
+            }
+            else if (now === 'home' && page === 'category')
             {
                 this[now].style.top = '-1500px'
                 this.most.style.top = '-1500px'
                 this[page].style.top = '0'
                 this.contact.style.top = '1500px'
-            } else if (now === 'most' && page === 'category')
+            }
+            else if (now === 'most' && page === 'category')
             {
                 this[now].style.top = '-1500px'
                 this.home.style.top = '-1500px'
                 this[page].style.top = '0'
                 this.contact.style.top = '1500px'
-            } else if (now === 'category' && page === 'most')
+            }
+            else if (now === 'category' && page === 'most')
             {
                 this[now].style.top = '1500px'
                 this.home.style.top = '-1500px'
                 this[page].style.top = '0'
                 this.contact.style.top = '1500px'
-            } else if (now === 'category' && page === 'home')
+            }
+            else if (now === 'category' && page === 'home')
             {
                 clearTimeout(this.timer)
                 this.setState({...this.state, tab: 1})
@@ -148,7 +157,8 @@ class Main extends Component
                 this.most.style.top = '1500px'
                 this[page].style.top = '0'
                 this.contact.style.top = '1500px'
-            } else if (now === 'most' && page === 'home')
+            }
+            else if (now === 'most' && page === 'home')
             {
                 clearTimeout(this.timer)
                 this.setState({...this.state, tab: 1})
@@ -163,37 +173,43 @@ class Main extends Component
                 this.category.style.top = '1500px'
                 this[page].style.top = '0'
                 this.contact.style.top = '1500px'
-            } else if (now === 'home' && page === 'contact')
+            }
+            else if (now === 'home' && page === 'contact')
             {
                 this[now].style.top = '-1500px'
                 this.category.style.top = '-1500px'
                 this.most.style.top = '-3000px'
                 this.contact.style.top = '0'
-            } else if (now === 'most' && page === 'contact')
+            }
+            else if (now === 'most' && page === 'contact')
             {
                 this[now].style.top = '-1500px'
                 this.category.style.top = '-1500px'
                 this.home.style.top = '-1500px'
                 this.contact.style.top = '0'
-            } else if (now === 'category' && page === 'contact')
+            }
+            else if (now === 'category' && page === 'contact')
             {
                 this[now].style.top = '-1500px'
                 this.most.style.top = '-1500px'
                 this.home.style.top = '-1500px'
                 this.contact.style.top = '0'
-            } else if (now === 'contact' && page === 'category')
+            }
+            else if (now === 'contact' && page === 'category')
             {
                 this[now].style.top = '1500px'
                 this.most.style.top = '-1500px'
                 this.home.style.top = '-1500px'
                 this.category.style.top = '0'
-            } else if (now === 'contact' && page === 'most')
+            }
+            else if (now === 'contact' && page === 'most')
             {
                 this[now].style.top = '1500px'
                 this.most.style.top = '0'
                 this.home.style.top = '-1500px'
                 this.category.style.top = '1500px'
-            } else if (now === 'contact' && page === 'home')
+            }
+            else if (now === 'contact' && page === 'home')
             {
                 clearTimeout(this.timer)
                 this.setState({...this.state, tab: 1})

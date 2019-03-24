@@ -104,6 +104,37 @@
     position: relative;
 }
 
+.event {
+    overflow: auto;
+    height: 88vh;
+    transition-duration: 0.3s;
+    position: relative;
+}
+
+.event-name {
+    width: 80%;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.event-description {
+    display: inline-block;
+    width: 80%;
+    margin: 30px auto;
+    text-align: justify;
+    text-align-all: right;
+    font-size: 14px;
+    font-weight: bold;
+    height: 0;
+    overflow: visible;
+}
+
+.event-description:last-child{
+    margin: 30px auto 60px auto;
+}
+
 .app-main {
     margin: auto;
     width: calc(100% - 250px);
@@ -630,6 +661,30 @@
     animation-timing-function: linear;
 }
 
+.loading-cont {
+    margin-top: 100px;
+}
+
+.slider-here {
+    margin: 0 auto 30px auto;
+    width: 80%;
+    direction: ltr;
+}
+
+.slider-here div{
+    transition: height 0.3s ease;
+}
+
+.category-img {
+    opacity: 1;
+    width: 100%;
+}
+
+.category-img-unload {
+    opacity: 0;
+    width: 100%;
+}
+
 @keyframes loc {
     0% {
         transform: translateY(0);
@@ -677,12 +732,24 @@
 }
 
 @media screen and (max-width: 1000px) and (min-width: 0px) {
-    .main {
-        margin: auto;
+
+
+    .event-name {
         width: 93%;
-        height: 88vh;
-        transition-duration: 0.3s;
-        position: relative;
+        font-size: 25px;
+    }
+
+    .event-description {
+        width: 93%;
+        font-size: 20px;
+    }
+
+    .slider-here {
+        width: 93%;
+    }
+
+    .main {
+        width: 93%;
     }
 
     .app-main {
