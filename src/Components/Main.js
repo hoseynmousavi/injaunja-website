@@ -59,24 +59,24 @@ class Main extends Component
                 {
                     this.setState({...this.state, page: 'most'}, () =>
                     {
-                        this.home.style.top = '-1500px'
-                        this.most.style.top = '0'
+                        this.home.style.transform = 'translateY(-1500px)'
+                        this.most.style.transform = 'translateY(0)'
                     })
                 }
                 else if (this.state.page === 'most')
                 {
                     this.setState({...this.state, page: 'category'}, () =>
                     {
-                        this.most.style.top = '-1500px'
-                        this.category.style.top = '0'
+                        this.most.style.transform = 'translateY(-1500px)'
+                        this.category.style.transform = 'translateY(0)'
                     })
                 }
                 else if (this.state.page === 'category')
                 {
                     this.setState({...this.state, page: 'contact'}, () =>
                     {
-                        this.category.style.top = '-1500px'
-                        this.contact.style.top = '0'
+                        this.category.style.transform = 'translateY(-1500px)'
+                        this.contact.style.transform = 'translateY(0)'
                     })
                 }
             }
@@ -86,24 +86,24 @@ class Main extends Component
                 {
                     this.setState({...this.state, page: 'category'}, () =>
                     {
-                        this.contact.style.top = '1500px'
-                        this.category.style.top = '0'
+                        this.contact.style.transform = 'translateY(1500px)'
+                        this.category.style.transform = 'translateY(0)'
                     })
                 }
                 else if (this.state.page === 'category')
                 {
                     this.setState({...this.state, page: 'most'}, () =>
                     {
-                        this.category.style.top = '1500px'
-                        this.most.style.top = '0'
+                        this.category.style.transform = 'translateY(1500px)'
+                        this.most.style.transform = 'translateY(0)'
                     })
                 }
                 else if (this.state.page === 'most')
                 {
                     this.setState({...this.state, page: 'home'}, () =>
                     {
-                        this.most.style.top = '1500px'
-                        this.home.style.top = '0'
+                        this.most.style.transform = 'translateY(1500px)'
+                        this.home.style.transform = 'translateY(0)'
                     })
                 }
             }
@@ -116,31 +116,31 @@ class Main extends Component
         {
             if (now === 'home' && page === 'most')
             {
-                this[now].style.top = '-1500px'
-                this[page].style.top = '0'
-                this.category.style.top = '1500px'
-                this.contact.style.top = '1500px'
+                this[now].style.transform = 'translateY(-1500px)'
+                this[page].style.transform = 'translateY(0)'
+                this.category.style.transform = 'translateY(1500px)'
+                this.contact.style.transform = 'translateY(1500px)'
             }
             else if (now === 'home' && page === 'category')
             {
-                this[now].style.top = '-1500px'
-                this.most.style.top = '-1500px'
-                this[page].style.top = '0'
-                this.contact.style.top = '1500px'
+                this[now].style.transform = 'translateY(-1500px)'
+                this.most.style.transform = 'translateY(-1500px)'
+                this[page].style.transform = 'translateY(0)'
+                this.contact.style.transform = 'translateY(1500px)'
             }
             else if (now === 'most' && page === 'category')
             {
-                this[now].style.top = '-1500px'
-                this.home.style.top = '-1500px'
-                this[page].style.top = '0'
-                this.contact.style.top = '1500px'
+                this[now].style.transform = 'translateY(-1500px)'
+                this.home.style.transform = 'translateY(-1500px)'
+                this[page].style.transform = 'translateY(0)'
+                this.contact.style.transform = 'translateY(1500px)'
             }
             else if (now === 'category' && page === 'most')
             {
-                this[now].style.top = '1500px'
-                this.home.style.top = '-1500px'
-                this[page].style.top = '0'
-                this.contact.style.top = '1500px'
+                this[now].style.transform = 'translateY(1500px)'
+                this.home.style.transform = 'translateY(-1500px)'
+                this[page].style.transform = 'translateY(0)'
+                this.contact.style.transform = 'translateY(1500px)'
             }
             else if (now === 'category' && page === 'home')
             {
@@ -153,10 +153,10 @@ class Main extends Component
                     else this.setState({...this.state, tab: 1})
                 }, 4000)
 
-                this[now].style.top = '1500px'
-                this.most.style.top = '1500px'
-                this[page].style.top = '0'
-                this.contact.style.top = '1500px'
+                this[now].style.transform = 'translateY(1500px)'
+                this.most.style.transform = 'translateY(1500px)'
+                this[page].style.transform = 'translateY(0)'
+                this.contact.style.transform = 'translateY(1500px)'
             }
             else if (now === 'most' && page === 'home')
             {
@@ -169,45 +169,45 @@ class Main extends Component
                     else this.setState({...this.state, tab: 1})
                 }, 4000)
 
-                this[now].style.top = '1500px'
-                this.category.style.top = '1500px'
-                this[page].style.top = '0'
-                this.contact.style.top = '1500px'
+                this[now].style.transform = 'translateY(1500px)'
+                this.category.style.transform = 'translateY(1500px)'
+                this[page].style.transform = 'translateY(0)'
+                this.contact.style.transform = 'translateY(1500px)'
             }
             else if (now === 'home' && page === 'contact')
             {
-                this[now].style.top = '-1500px'
-                this.category.style.top = '-1500px'
-                this.most.style.top = '-3000px'
-                this.contact.style.top = '0'
+                this[now].style.transform = 'translateY(-1500px)'
+                this.category.style.transform = 'translateY(-1500px)'
+                this.most.style.transform = 'translateY(-3000px)'
+                this.contact.style.transform = 'translateY(0)'
             }
             else if (now === 'most' && page === 'contact')
             {
-                this[now].style.top = '-1500px'
-                this.category.style.top = '-1500px'
-                this.home.style.top = '-1500px'
-                this.contact.style.top = '0'
+                this[now].style.transform = 'translateY(-1500px)'
+                this.category.style.transform = 'translateY(-1500px)'
+                this.home.style.transform = 'translateY(-1500px)'
+                this.contact.style.transform = 'translateY(0)'
             }
             else if (now === 'category' && page === 'contact')
             {
-                this[now].style.top = '-1500px'
-                this.most.style.top = '-1500px'
-                this.home.style.top = '-1500px'
-                this.contact.style.top = '0'
+                this[now].style.transform = 'translateY(-1500px)'
+                this.most.style.transform = 'translateY(-1500px)'
+                this.home.style.transform = 'translateY(-1500px)'
+                this.contact.style.transform = 'translateY(0)'
             }
             else if (now === 'contact' && page === 'category')
             {
-                this[now].style.top = '1500px'
-                this.most.style.top = '-1500px'
-                this.home.style.top = '-1500px'
-                this.category.style.top = '0'
+                this[now].style.transform = 'translateY(1500px)'
+                this.most.style.transform = 'translateY(-1500px)'
+                this.home.style.transform = 'translateY(-1500px)'
+                this.category.style.transform = 'translateY(0)'
             }
             else if (now === 'contact' && page === 'most')
             {
-                this[now].style.top = '1500px'
-                this.most.style.top = '0'
-                this.home.style.top = '-1500px'
-                this.category.style.top = '1500px'
+                this[now].style.transform = 'translateY(1500px)'
+                this.most.style.transform = 'translateY(0)'
+                this.home.style.transform = 'translateY(-1500px)'
+                this.category.style.transform = 'translateY(1500px)'
             }
             else if (now === 'contact' && page === 'home')
             {
@@ -220,10 +220,10 @@ class Main extends Component
                     else this.setState({...this.state, tab: 1})
                 }, 4000)
 
-                this[now].style.top = '1500px'
-                this.most.style.top = '1500px'
-                this.home.style.top = '0'
-                this.category.style.top = '3000px'
+                this[now].style.transform = 'translateY(1500px)'
+                this.most.style.transform = 'translateY(1500px)'
+                this.home.style.transform = 'translateY(0)'
+                this.category.style.transform = 'translateY(3000px)'
             }
 
 
@@ -232,7 +232,6 @@ class Main extends Component
 
     openApplication()
     {
-        // window.open(window.location.href + 'App', '_blank')
         this.props.enableModal()
     }
 
@@ -258,8 +257,7 @@ class Main extends Component
                 <div className='home-titles-right'>
                     <div className='home-titles-right-cont'>
 
-                        <div
-                            className={this.state.page === 'home' ? 'home-titles-home' : this.state.page === 'most' ? 'home-titles-most' : this.state.page === 'category' ? 'home-titles-category' : 'home-titles-contact'}/>
+                        <div className={this.state.page === 'home' ? 'home-titles-home' : this.state.page === 'most' ? 'home-titles-most' : this.state.page === 'category' ? 'home-titles-category' : 'home-titles-contact'}/>
 
                         <div className='home-titles-right-item-cont' onClick={() => this.handleClick('home')}>
                             <div className={this.state.page === 'home' ? 'home-titles-right-item' : 'home-titles-right-item-none'}>خانه</div>
@@ -303,7 +301,7 @@ class Main extends Component
                     </div>
                 </div>
 
-                <div className='section' ref={e => this.most = e} style={{position: 'absolute', top: '1500px', left: '0'}}>
+                <div className='section' ref={e => this.most = e} style={{position: 'absolute', top: '0', left: '0', transform: 'translateY(1500px)'}}>
 
                     <div className='most'>
 
@@ -352,7 +350,7 @@ class Main extends Component
                     </div>
                 </div>
 
-                <div className='section' ref={e => this.category = e} style={{position: 'absolute', top: '1500px', left: '0'}}>
+                <div className='section' ref={e => this.category = e} style={{position: 'absolute', top: '0', left: '0', transform: 'translateY(1500px)'}}>
                     <div className='category-cont'>
                         <img src={astronomy} className='category-logo' alt='' onClick={this.openApplication}/>
                         <img src={basketball} className='category-logo' alt='' onClick={this.openApplication}/>
@@ -370,7 +368,7 @@ class Main extends Component
                 </div>
 
 
-                <div className='section' ref={e => this.contact = e} style={{position: 'absolute', top: '1500px', left: '0', overflow: 'hidden'}}>
+                <div className='section' ref={e => this.contact = e} style={{position: 'absolute', top: '0', left: '0', overflow: 'hidden', transform: 'translateY(1500px)'}}>
                     <div className='contact-container'>
                         <Location className='contact-location'/>
                         <div className='contact-form'>
