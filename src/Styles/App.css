@@ -131,7 +131,7 @@
     overflow: visible;
 }
 
-.event-description:last-child{
+.event-description:last-child {
     margin: 30px auto 60px auto;
 }
 
@@ -417,6 +417,7 @@
     max-width: 140px;
     max-height: 140px;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 .app-cont {
@@ -519,9 +520,14 @@
 
 .contact-location {
     cursor: pointer;
-    flex-grow: 4;
-    object-fit: contain;
+    flex-grow: 1;
     margin: 100px auto;
+}
+
+.location {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .contact-form {
@@ -671,7 +677,7 @@
     direction: ltr;
 }
 
-.slider-here div{
+.slider-here div {
     transition: height 0.3s ease;
 }
 
@@ -710,11 +716,8 @@
 
 @media screen and (min-width: 1550px) {
     .category-logo {
-        flex-grow: 1;
-        margin: 20px;
         max-width: 190px;
         max-height: 190px;
-        cursor: pointer;
     }
 
     .most-items {
@@ -732,7 +735,6 @@
 }
 
 @media screen and (max-width: 1000px) and (min-width: 0px) {
-
 
     .event-name {
         width: 93%;
@@ -821,12 +823,8 @@
     }
 
     .category-logo {
-        flex-grow: 1;
-        margin: 20px;
         max-width: 120px;
         max-height: 120px;
-        cursor: pointer;
-        transition-duration: 0.5s;
     }
 
     .home-titles-home {
@@ -893,13 +891,8 @@
     }
 
     .contact-location {
-        cursor: pointer;
         order: 2;
-        flex-grow: 1;
-        object-fit: contain;
-        max-width: 400px;
-        margin: 30px auto 0 auto;
-        transition-duration: 0.5s;
+        margin-top: 30px;
     }
 
     .contact-form {
@@ -986,10 +979,7 @@
 
     @media screen and (max-height: 900px) and (min-height: 0px) {
         .contact-location {
-            cursor: pointer;
             order: 2;
-            flex-grow: 1;
-            object-fit: contain;
             max-width: 0;
             transition-duration: 0.5s;
             margin: 40px auto 0 auto;

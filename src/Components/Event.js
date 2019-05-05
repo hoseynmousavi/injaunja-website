@@ -57,16 +57,11 @@ class Event extends Component
                             }
                         </Slick>
                     </div>
-                    <div className='event-description'>{event.description}</div>
-                    <div className='event-description'>{event.info}</div>
-                    <div className='event-description'>آدرس: {event.address}</div>
+                    {event.description && <div className='event-description'>{event.description}</div>}
+                    {event.info && <div className='event-description'>{event.info}</div>}
+                    {event.address && <div className='event-description'>آدرس: {event.address}</div>}
                     <div className='event-description'>تاریخ شروع: {event.start_year + '/' + event.start_month + '/' + event.start_day}</div>
-                    {
-                        event.end_day ?
-                            <div className='event-description'>تاریخ پایان: {event.end_year + '/' + event.end_month + '/' + event.end_day}</div>
-                            : null
-                    }
-
+                    {event.end_day && <div className='event-description'>تاریخ پایان: {event.end_year + '/' + event.end_month + '/' + event.end_day}</div>}
                 </div>
             )
         }

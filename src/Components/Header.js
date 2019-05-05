@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '../Media/Images/logo'
 import android from '../Media/Images/androidLogo.svg'
 import ios from '../Media/Images/iosLogo.png'
+import {Link} from 'react-router-dom'
 
 class Header extends React.Component
 {
@@ -9,7 +10,7 @@ class Header extends React.Component
     {
         super(props)
         this.state = {
-            open: false
+            open: false,
         }
         this.handleMouseDown = this.handleMouseDown.bind(this)
     }
@@ -34,7 +35,7 @@ class Header extends React.Component
     {
         return (
             <header ref={e => this.header = e} className='header'>
-                <Logo className='logo'/>
+                <Link to='/'><Logo className='logo'/></Link>
                 <button className='app-button' onClick={() =>
                 {
                     this.setState({...this.state, open: !this.state.open})

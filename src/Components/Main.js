@@ -370,7 +370,9 @@ class Main extends Component
 
                 <div className='section' ref={e => this.contact = e} style={{position: 'absolute', top: '0', left: '0', overflow: 'hidden', transform: 'translateY(1500px)'}}>
                     <div className='contact-container'>
-                        <Location className='contact-location'/>
+                        <div className='contact-location'>
+                            <Location className='location'/>
+                        </div>
                         <div className='contact-form'>
                             <div className='contact-form-headers'>
                                 <div className='contact-form-header'>تماس‌با‌ما</div>
