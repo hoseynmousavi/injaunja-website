@@ -1,11 +1,11 @@
 .modal-back {
     filter: blur(5px);
-    transition-duration: 0.2s;
+    /*transition-duration: 0.2s;*/
 }
 
 .modal-back-hide {
     filter: blur(0);
-    transition-duration: 0.5s;
+    /*transition-duration: 0.5s;*/
 }
 
 .logo {
@@ -478,7 +478,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #FFFFFF;
+    background-color: #141414;
+    color: whitesmoke;
     border-radius: 40px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
     text-align: center;
