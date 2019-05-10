@@ -978,7 +978,7 @@
         opacity: 0;
     }
 
-    @media screen and (max-height: 900px) and (min-height: 0px) {
+    @media screen and (max-height: 1150px) and (min-height: 0px) {
         .contact-location {
             order: 2;
             max-width: 0;
@@ -996,9 +996,7 @@
             transition-duration: 0.5s;
         }
     }
-
 }
-
 
 .coming {
     margin-top: 20px;
