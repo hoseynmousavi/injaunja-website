@@ -10,12 +10,13 @@ class Event extends Component
         super(props)
         this.state = {
             event: null,
+            ios: null,
         }
     }
 
     componentDidMount()
     {
-        this.getData()
+        this.setState({...this.state, ios: !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)}, () => this.getData())
     }
 
     getData()
@@ -44,24 +45,26 @@ class Event extends Component
     {
         if (this.state.event)
         {
+            if (this.state.ios) window.location.href = `injaunja://event/${this.props.param.match.params.id}`
             const {event} = this.state
+            const {pictures, name, description, info, address, start_year, start_month, start_day, end_year, end_month, end_day} = event
             return (
                 <div className='event'>
-                    <div className='event-name'>{event.name}</div>
+                    <div className='event-name'>{name}</div>
                     <div className='slider-here'>
                         <Slick {...{dots: true, adaptiveHeight: true}}>
                             {
-                                JSON.parse(event.pictures) && JSON.parse(event.pictures).map((img, i) =>
+                                JSON.parse(pictures) && JSON.parse(pictures).map((img, i) =>
                                     <CategoryImage key={i} picture={img}/>,
                                 )
                             }
                         </Slick>
                     </div>
-                    {event.description && <div className='event-description'>{event.description}</div>}
-                    {event.info && <div className='event-description'>{event.info}</div>}
-                    {event.address && <div className='event-description'>آدرس: {event.address}</div>}
-                    <div className='event-description'>تاریخ شروع: {event.start_year + '/' + event.start_month + '/' + event.start_day}</div>
-                    {event.end_day && <div className='event-description'>تاریخ پایان: {event.end_year + '/' + event.end_month + '/' + event.end_day}</div>}
+                    {description && <div className='event-description'>{description}</div>}
+                    {info && <div className='event-description'>{info}</div>}
+                    {address && <div className='event-description'>آدرس: {address}</div>}
+                    <div className='event-description'>تاریخ شروع: {start_year + '/' + start_month + '/' + start_day}</div>
+                    {end_day && <div className='event-description'>تاریخ پایان: {end_year + '/' + end_month + '/' + end_day}</div>}
                 </div>
             )
         }
