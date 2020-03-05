@@ -1,0 +1,11 @@
+{
+  "name": "node_server",
+  "version": "1.0.0",
+  "description": "nodejs handle front of injaunja",
+  "main": "index.js",
+  "author": "Hoseyn Mousavi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
