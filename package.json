@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && del build\\static\\js\\*.map && del build\\static\\css\\*.map && gzip -r build\\static\\js && gzip -r build\\static\\css && cat add.js >> build\\service-worker.js",
+    "build": "react-scripts build && del build\\static\\js\\*.map && del build\\static\\css\\*.map && gzip -r build\\static\\js && gzip -r build\\static\\css && cat add.js >> build\\service-worker.js"
   },
   "eslintConfig": {
     "extends": "react-app"
